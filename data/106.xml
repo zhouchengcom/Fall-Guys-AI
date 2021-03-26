@@ -1,0 +1,125 @@
+<annotation>
+    <folder>workspace</folder>
+    <filename>106.jpg</filename>
+    <path>/workspace/106.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1561</width>
+        <height>754</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>shaolin</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>41</xmin>
+            <ymin>86</ymin>
+            <xmax>120</xmax>
+            <ymax>169</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>emei</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>46</xmin>
+            <ymin>329</ymin>
+            <xmax>118</xmax>
+            <ymax>407</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>gaibang</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>44</xmin>
+            <ymin>445</ymin>
+            <xmax>123</xmax>
+            <ymax>527</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>wudang</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>44</xmin>
+            <ymin>562</ymin>
+            <xmax>123</xmax>
+            <ymax>650</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>tianwang</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>149</xmin>
+            <ymin>143</ymin>
+            <xmax>229</xmax>
+            <ymax>228</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>wudu</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>151</xmin>
+            <ymin>266</ymin>
+            <xmax>226</xmax>
+            <ymax>350</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>cuiyan</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>149</xmin>
+            <ymin>384</ymin>
+            <xmax>231</xmax>
+            <ymax>462</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>tianren</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>149</xmin>
+            <ymin>504</ymin>
+            <xmax>226</xmax>
+            <ymax>589</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>kunlun</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>155</xmin>
+            <ymin>629</ymin>
+            <xmax>221</xmax>
+            <ymax>703</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>name</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>920</xmin>
+            <ymin>635</ymin>
+            <xmax>974</xmax>
+            <ymax>687</ymax>
+        </bndbox>
+    </object>
+</annotation>

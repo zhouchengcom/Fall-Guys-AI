@@ -1,36 +1,36 @@
-from fastai.vision.all import *
-import time
+import random
+
+import numpy as np
 import cv2
-from utils.grabscreen import grab_screen
-
-def label_func(x): return x.parent.name
-
-def run():
-    path = Path("E:/DoorDash/")
-    fnames = get_image_files(path)
-    print(f"Total Images:{len(fnames)}")
+import matplotlib.pyplot as plt
+import albumentations as A
+import pprint
 
 
-    dls = ImageDataLoaders.from_path_func(path, fnames, label_func,bs=40, num_workers=0)
-    learn = cnn_learner(dls, resnet18, metrics=error_rate)
-    print("Loaded")
-    learn.fine_tune(4, base_lr=1.0e-02)
+def main():
+    image = cv2.imread("cuiyan.png")
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-    learn.export()
+    def visualize(image):
+        plt.figure(figsize=(6, 6))
+        plt.axis("off")
+        plt.imshow(image)
+        # plt.show()
 
-    # start_time = time.time()
-    # test = learn.predict('g1-j5.png')
-    # print("--- %s seconds ---" % (time.time() - start_time))
-    # print(test)
-    start_time = time.time()
-    image = grab_screen(region=(50, 100, 799, 449))
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    image = cv2.Canny(image, threshold1=200, threshold2=300)
-    image = cv2.resize(image, (224, 224))
-    test = learn.predict(image)
-    print("--- %s seconds ---" % (time.time() - start_time))
-    print(test)
+    transform = A.Compose(
+        [
+            A.RandomCrop(111, 222),
+            A.OneOf([A.RGBShift(), A.HueSaturationValue()]),
+        ]
+    )
+
+    random.seed(42)
+    transformed = transform(image=image)
+    visualize(transformed["image"])
+
+    A.save(transform, "./transform.json")
+    A.save(transform, "./transform.yml", data_format="yaml")
+    pprint.pprint(A.to_dict(transform))
 
 
-if __name__ == '__main__':
-    run()
+main()

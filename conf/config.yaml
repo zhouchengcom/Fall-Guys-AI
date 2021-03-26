@@ -1,0 +1,13 @@
+
+augmentation: 
+  config: augmentation\transform.yaml
+  run: true
+  input_dir: input
+  output_dir: augmentation_data
+  factor: 10
+  train_factor: 0.8
+
+
+defaults:
+  - model: COCO-Detection\faster_rcnn_R_50_FPN_3x
+  # - augmentation: transform
